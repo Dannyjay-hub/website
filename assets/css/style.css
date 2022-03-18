@@ -1884,24 +1884,24 @@ h2.project_heading:after {
 	opacity: 1;
     visibility: visible;
 }
-.port_project_gallery .grid-item:hover .grid_img:before {
+.port_project_gallery .grid-item:hover .grid_video:before {
 	opacity: 1;
     visibility: visible;
 }
-.port_project_gallery .grid_img img{
+.port_project_gallery .grid_video video{
     transition: all 700ms ease;
     -webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -ms-transition: all 700ms ease;
     -o-transition: all 700ms ease;
 }
-.port_project_gallery .grid-item:hover .grid_img img{
+.port_project_gallery .grid-item:hover .grid_video video{
 	transform: scale(1.2,1.2);
 }
 .port_project_gallery .port_project_gallery_view a {
     z-index: 0;
 }
-.port_project_gallery .grid_img {
+.port_project_gallery .grid_video {
     overflow: hidden;
     position: relative;
 }
