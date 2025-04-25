@@ -2645,6 +2645,21 @@ I'm passionate about building a better Africa through innovation and technology,
 <script src="assets/js/jquery-jvectormap-world-mill.js"></script>
 <script src="assets/js/scrollbar.js"></script>
 <script src="assets/js/custom.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    var grid = document.querySelector('.gallery_grid');
+    var iso = new Isotope(grid, {
+      itemSelector: '.grid-item',
+      layoutMode: 'masonry'
+    });
+
+    // Wait for all images to load, then trigger Isotope layout
+    imagesLoaded(grid, function () {
+      iso.layout();
+    });
+  });
+</script>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></ul></div></div></div><script>
 window.addEventListener('load', () => {
   document.querySelector('.preloader').style.display = 'none';
