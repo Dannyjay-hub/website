@@ -3243,3 +3243,85 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* ================== Premium Micro-Interactions ================== */
+
+/* 1. Services Card Elevation & Icon Rotation */
+.port_services_setions .port_services_box {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.port_services_setions .port_services_box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(0, 200, 218, 0.3) !important;
+}
+.port_services_setions .port_services_box img {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.port_services_setions .port_services_box:hover img {
+    transform: scale(1.12) rotate(3deg);
+}
+
+/* 2. Experience Timeline Card Elevation */
+.port_experience_setions .exprince_box {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.port_experience_setions .exprince_box:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* 3. Project Cards Hover Zoom */
+.port_project_gallery .grid-item {
+    overflow: hidden;
+}
+.port_project_gallery .grid-item .grid_img {
+    overflow: hidden;
+    position: relative;
+}
+.port_project_gallery .grid-item .grid_img img {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.port_project_gallery .grid-item:hover .grid_img img {
+    transform: scale(1.06);
+}
+.port_project_gallery .grid-item .grid-content {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.4s ease, box-shadow 0.4s ease;
+}
+.port_project_gallery .grid-item:hover .grid-content {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 4. Social Media Buttons Zoom & Rotation */
+.personal_details a.social-button {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.personal_details a.social-button:hover {
+    transform: scale(1.15) translateY(-3px) rotate(4deg);
+    box-shadow: 0 8px 15px rgba(255, 81, 126, 0.3) !important;
+}
+.port_sidebar_social ul.social_list li a {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.port_sidebar_social ul.social_list li a:hover {
+    transform: scale(1.25) rotate(8deg);
+}
+
+/* 5. Buttons Smooth Elevation */
+.portfolio_btn {
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.3s ease;
+}
+.portfolio_btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 6. Form Inputs Focus Glow */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.form-control:focus {
+    border-color: #00c8da !important;
+    box-shadow: 0 0 0 4px rgba(0, 200, 218, 0.15) !important;
+    background-color: #fff !important;
+}
