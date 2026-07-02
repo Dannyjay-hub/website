@@ -225,42 +225,8 @@ Assigned to: ThemeForest
 	// End testimonial swipper slider
 	/*------------------------------------------------------------------*/ 
 	
-	// Re sponsor swipper slider
+	// Re sponsor swipper slider (Obsolete, marquee is CSS-based now)
 	responsor_slider: function() {
-		if($('.port_responsor_setions .swiper-container').length > 0){
-			var swiper = new Swiper('.port_responsor_setions .swiper-container', {
-			  slidesPerView: 5,
-			  spaceBetween: 30,
-			  loop: true,
-			  freeMode: true,
-			  freeModeMomentum: false,
-			  speed: 2500,
-			  autoplay: {
-					delay: 0,
-					disableOnInteraction: false,
-				},
-				
-			// Responsive breakpoints
-			  breakpoints: {
-				// when window width is <= 320px
-				480: {
-				  slidesPerView: 1,
-				  spaceBetween: 10
-				},
-				// when window width is <= 480px
-				767: {
-				  slidesPerView: 3,
-				  spaceBetween: 20
-				},
-				// when window width is <= 640px
-				991: {
-				  slidesPerView: 4,
-				  spaceBetween: 30
-				}
-			  }
-		 
-			});
-		}
 	},
 	
 	// End Re sponsor swipper slider

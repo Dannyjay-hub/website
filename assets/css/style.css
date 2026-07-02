@@ -2144,46 +2144,54 @@ h2.project_heading:after {
 /*================== 13 Start responser section css ==================  */
 .port_responsor_setions {
     background: #00c8da;
+    position: relative;
+    overflow: hidden;
 }
-.port_responsor_setions .swiper-container {
+
+/* CSS Marquee Styles */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
     mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
 }
-.port_responsor_setions .swiper-wrapper {
-    -webkit-transition-timing-function: linear !important;
-    transition-timing-function: linear !important;
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-scroll 22s linear infinite;
 }
-.port_responsor_setions .swiper-slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+
+.marquee-item {
+    display: inline-block;
+    padding: 0 45px;
+    vertical-align: middle;
 }
-.port_responsor_setions .port_swipper_responsor {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 50px;
-    width: 100%;
-}
-.port_responsor_setions .port_swipper_responsor img {
+
+.marquee-item img {
     max-height: 40px;
     max-width: 140px;
     width: auto;
     height: auto;
     object-fit: contain;
 }
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
 .port_swipper_responsor svg {
 	-webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
