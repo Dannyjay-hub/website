@@ -3325,3 +3325,26 @@ html.lenis, html.lenis body {
     box-shadow: 0 0 0 4px rgba(0, 200, 218, 0.15) !important;
     background-color: #fff !important;
 }
+
+/* Partners Marquee Header Title Styling */
+.partners-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 600;
+    margin: 0 auto 10px auto;
+    font-family: 'Josefin Sans', sans-serif;
+    display: inline-block;
+}
+
+/* Fix bottom footer white gap layout issues */
+.port_footer_setions {
+    padding-bottom: 0 !important;
+}
+.footer_section {
+    padding-bottom: 0 !important;
+}
+.port_footer_setions .copy_right_wrapper {
+    margin-bottom: 0 !important;
+}

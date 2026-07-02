@@ -229,6 +229,53 @@ const lenis = new Lenis({
 
 // Integrate Lenis with GSAP ScrollTrigger
 lenis.on('scroll', ScrollTrigger.update);
+
+// Premium GSAP Hero Entrance Animations
+window.addEventListener('DOMContentLoaded', () => {
+  // Setup initial hidden states to prevent flash of unstyled elements
+  gsap.set('.port_sidebar_wrapper', { x: -80, opacity: 0 });
+  gsap.set('.banner_img_wrapper', { scale: 0.94, x: 50, opacity: 0 });
+  gsap.set('.bannner_leftpart > *', { y: 40, opacity: 0 });
+  gsap.set('.banner_btn, .brc_hirebtn', { scale: 0.8, opacity: 0 });
+
+  // Create the timeline
+  const heroTL = gsap.timeline({
+    defaults: { ease: 'power3.out' }
+  });
+
+  // 1. Reveal Sidebar Navigation from the left
+  heroTL.to('.port_sidebar_wrapper', {
+    x: 0,
+    opacity: 1,
+    duration: 1.2
+  });
+
+  // 2. Animate Main Avatar image scaling up and sliding in
+  heroTL.to('.banner_img_wrapper', {
+    scale: 1,
+    x: 0,
+    opacity: 1,
+    duration: 1.6,
+    ease: 'power4.out'
+  }, '-=0.9');
+
+  // 3. Stagger reveal left-side banner texts
+  heroTL.to('.bannner_leftpart > *', {
+    y: 0,
+    opacity: 1,
+    stagger: 0.15,
+    duration: 1.1
+  }, '-=1.2');
+
+  // 4. Pop in download button and floating hire button
+  heroTL.to('.banner_btn, .brc_hirebtn', {
+    scale: 1,
+    opacity: 1,
+    stagger: 0.12,
+    duration: 0.8,
+    ease: 'back.out(1.6)'
+  }, '-=0.6');
+});
 </script>
 <!-- Calendly Popup Script -->
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
