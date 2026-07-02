@@ -2257,9 +2257,14 @@ h2.project_heading:after {
 	cursor:pointer;
 }
 .port_contact_form .response {
-	color: #ff0000;
-    padding-left: 18px;
-    padding-top: 5px;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 0;
+}
+.port_contact_form .response p {
+    margin: 0 !important;
+    display: inline-block;
 }
 /*================== 15 End contact section css ==================  */
 
