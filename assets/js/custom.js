@@ -234,7 +234,7 @@ Assigned to: ThemeForest
 			  loop: true,
 			  freeMode: true,
 			  freeModeMomentum: false,
-			  speed: 4500,
+			  speed: 3000,
 			  autoplay: {
 					delay: 0,
 					disableOnInteraction: false,
