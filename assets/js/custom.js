@@ -355,22 +355,24 @@ Assigned to: ThemeForest
 				var check = checkRequire(targetForm , errroTarget);
 				if(check == 0){
 					var formDetail = new FormData(targetForm[0]);
-    					formDetail.append('form_type' , _this.attr('data-type'));
+					formDetail.set('form-name', 'contact');
 					$.ajax({
 						method : 'post',
-						url : 'ajax.php',
+						url : '/',
 						data:formDetail,
 						cache:false,
 						contentType: false,
 						processData: false
-					}).done(function(resp){
-						if(resp == 1){
+					}).done(function(resp, textStatus, xhr){
+						if(xhr.status == 200 || xhr.status == 201){
 							targetForm.find('input').val('');
 							targetForm.find('textarea').val('');
-							errroTarget.html('<p style="color:green;">Mail has been sent successfully.</p>');
+							errroTarget.html('<p style="color:green;">Message has been sent successfully.</p>');
 						}else{
-							errroTarget.html('<p style="color:red;">Something went wrong please try again latter.</p>');
+							errroTarget.html('<p style="color:red;">Something went wrong. Please try again later.</p>');
 						}
+					}).fail(function(){
+						errroTarget.html('<p style="color:red;">Something went wrong. Please try again later.</p>');
 					});
 				}
 			});
