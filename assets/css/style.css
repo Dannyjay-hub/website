@@ -3361,7 +3361,11 @@ html.lenis, html.lenis body {
 }
 
 /* Ensure the floating Hire Me button is always clickable and on top */
-.brc_hirebtn {
+.banner_img_wrapper {
+    pointer-events: none !important;
+    z-index: 999 !important;
+}
+.brc_hirebtn, .brc_hirebtn a {
     pointer-events: auto !important;
     z-index: 99999 !important;
 }

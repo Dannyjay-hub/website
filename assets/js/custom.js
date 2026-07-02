@@ -101,11 +101,16 @@ Assigned to: ThemeForest
 	// right side hire me btn
 	rightbtn_onload: function() {
 		if($('.brc_hirebtn').length > 0){	
-			$(window).on('load', function(){
-			setTimeout(function() {
-				$('.brc_hirebtn').addClass('mbrc_hirebtn');
+			var showBtn = function() {
+				setTimeout(function() {
+					$('.brc_hirebtn').addClass('mbrc_hirebtn');
 				}, 2500);
-			});
+			};
+			if (document.readyState === 'complete') {
+				showBtn();
+			} else {
+				$(window).on('load', showBtn);
+			}
 		}
 	},
 	/*------------------------------------------------------------------*/ 
