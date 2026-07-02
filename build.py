@@ -15,7 +15,6 @@ COMPONENTS = [
     "experience.html",
     "services.html",
     "projects.html",
-    "blog.html",
     "partners.html",
     "contact.html",
     "footer.html"
