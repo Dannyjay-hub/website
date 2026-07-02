@@ -3359,3 +3359,9 @@ html.lenis, html.lenis body {
 .port_sec_warapper {
     padding-bottom: 0 !important;
 }
+
+/* Ensure the floating Hire Me button is always clickable and on top */
+.brc_hirebtn {
+    pointer-events: auto !important;
+    z-index: 99999 !important;
+}

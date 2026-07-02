@@ -187,7 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
   gsap.set('.port_sidebar_wrapper', { x: -80, opacity: 0 });
   gsap.set('.banner_img_wrapper', { scale: 0.94, x: 50, opacity: 0 });
   gsap.set('.bannner_leftpart > *', { y: 40, opacity: 0 });
-  gsap.set('.banner_btn, .brc_hirebtn', { scale: 0.8, opacity: 0 });
+  gsap.set('.banner_btn', { scale: 0.8, opacity: 0 });
 
   // Create the timeline
   const heroTL = gsap.timeline({
@@ -218,11 +218,10 @@ window.addEventListener('DOMContentLoaded', () => {
     duration: 1.1
   }, '-=1.2');
 
-  // 4. Pop in download button and floating hire button
-  heroTL.to('.banner_btn, .brc_hirebtn', {
+  // 4. Pop in download button
+  heroTL.to('.banner_btn', {
     scale: 1,
     opacity: 1,
-    stagger: 0.12,
     duration: 0.8,
     ease: 'back.out(1.6)'
   }, '-=0.6');
