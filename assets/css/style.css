@@ -2166,7 +2166,7 @@ h2.project_heading:after {
 .marquee-content {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee-scroll 22s linear infinite;
+    animation: marquee-scroll 32s linear infinite;
 }
 
 .marquee-item {
