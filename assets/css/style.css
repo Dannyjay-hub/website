@@ -3363,9 +3363,17 @@ html.lenis, html.lenis body {
 /* Ensure the floating Hire Me button is always clickable and on top */
 .banner_img_wrapper {
     pointer-events: none !important;
-    z-index: 999 !important;
+    z-index: 1 !important; /* Move image layer below the text layer */
 }
 .brc_hirebtn, .brc_hirebtn a {
     pointer-events: auto !important;
-    z-index: 99999 !important;
+    z-index: 99999 !important; /* Button stays on top of everything */
+}
+.banner_content {
+    position: relative;
+    z-index: 10 !important; /* Put text layer (name) on top of image wrapper */
+}
+.banner_svg_box {
+    transform: none !important;
+    transition: none !important; /* Disable the old scale 0-100 animations */
 }
