@@ -1202,7 +1202,7 @@ lenis.on('scroll', ScrollTrigger.update);
 window.addEventListener('DOMContentLoaded', () => {
   // Setup initial hidden states to prevent flash of unstyled elements
   gsap.set('.port_sidebar_wrapper', { x: -80, opacity: 0 });
-  gsap.set('.banner_img_wrapper', { scale: 1.05, y: 30, opacity: 0 });
+  gsap.set('.banner_img_wrapper', { scale: 1.06, y: 40, opacity: 0 });
   gsap.set('.bannner_leftpart > *', { y: 40, opacity: 0 });
   gsap.set('.banner_btn', { scale: 0.8, opacity: 0 });
 
@@ -1223,8 +1223,8 @@ window.addEventListener('DOMContentLoaded', () => {
     scale: 1,
     y: 0,
     opacity: 1,
-    duration: 1.6,
-    ease: 'power3.out'
+    duration: 1.8,
+    ease: 'power4.out'
   }, '-=0.9');
 
   // 3. Stagger reveal left-side banner texts
