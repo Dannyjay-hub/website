@@ -232,9 +232,12 @@ Assigned to: ThemeForest
 			  slidesPerView: 5,
 			  spaceBetween: 30,
 			  loop: true,
-			  speed:1000,
+			  freeMode: true,
+			  freeModeMomentum: false,
+			  speed: 4500,
 			  autoplay: {
-					delay: 3500,
+					delay: 0,
+					disableOnInteraction: false,
 				},
 				
 			// Responsive breakpoints

@@ -2145,6 +2145,10 @@ h2.project_heading:after {
 .port_responsor_setions {
     background: #00c8da;
 }
+.port_responsor_setions .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+}
 .port_responsor_setions .port_swipper_responsor {
     text-align: center;
 }
