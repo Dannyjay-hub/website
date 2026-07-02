@@ -358,7 +358,7 @@ Assigned to: ThemeForest
 						data: targetForm.serialize(),
 						cache: false
 					}).done(function(){
-						targetForm.find('input').val('');
+						targetForm.find('input:not([type="hidden"])').val('');
 						targetForm.find('textarea').val('');
 						errroTarget.html('<p style="color:green;">Message has been sent successfully.</p>');
 					}).fail(function(){
