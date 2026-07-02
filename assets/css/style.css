@@ -2144,6 +2144,10 @@ h2.project_heading:after {
 /*================== 13 Start responser section css ==================  */
 .port_responsor_setions {
     background: #00c8da;
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
 }
 .port_responsor_setions .swiper-wrapper {
     -webkit-transition-timing-function: linear !important;
