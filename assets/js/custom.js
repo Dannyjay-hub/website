@@ -44,8 +44,7 @@ Assigned to: ThemeForest
 			this.window_scroll();
 			this.scroll_contact();
 			this.read_more();
-			
-			
+			this.contact_form();
 		},
 		
 		/*-------------- CV Portfolio Functions Calling ---------------------------------------------------
