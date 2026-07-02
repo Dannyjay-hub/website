@@ -934,20 +934,11 @@ I enjoy building the systems behind great creative work just as much as the work
 </div>
 </div>
 </div><!-- End Portfolio section  -->
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 
 		<!-- start responsers section  -->
 		<div class="container text-center prt_toppadder20">
-			<div class="port_heading_wrapper text-center prt_bottompadder0">
+			<div class="port_heading_wrapper text-center prt_bottompadder40">
 				<div class="port_sub_heading_wrapper">
 					<h2 class="port_sub_heading">Collaborations</h2>
 				</div>
@@ -1247,8 +1238,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Setup initial hidden states to prevent flash of unstyled elements
   gsap.set('.port_sidebar_wrapper', { x: -80, opacity: 0 });
   gsap.set('.banner_img_wrapper', { scale: 1.06, y: 40, opacity: 0 });
-  gsap.set('.bannner_leftpart > *', { y: 40, opacity: 0 });
-  gsap.set('.banner_btn', { scale: 0.8, opacity: 0 });
+  gsap.set('.bannner_leftpart > *:not(.banner_btn)', { y: 40, opacity: 0 });
+  gsap.set('.banner_btn', { scale: 0.8, y: 30, opacity: 0 });
 
   // Create the timeline
   const heroTL = gsap.timeline({
@@ -1271,17 +1262,18 @@ window.addEventListener('DOMContentLoaded', () => {
     ease: 'power4.out'
   }, '-=0.9');
 
-  // 3. Stagger reveal left-side banner texts
-  heroTL.to('.bannner_leftpart > *', {
+  // 3. Stagger reveal left-side banner texts (excluding button)
+  heroTL.to('.bannner_leftpart > *:not(.banner_btn)', {
     y: 0,
     opacity: 1,
     stagger: 0.15,
     duration: 1.1
   }, '-=1.2');
 
-  // 4. Pop in download button
+  // 4. Pop in download button (with scale, slide, and opacity in one smooth transition)
   heroTL.to('.banner_btn', {
     scale: 1,
+    y: 0,
     opacity: 1,
     duration: 0.8,
     ease: 'back.out(1.6)'
