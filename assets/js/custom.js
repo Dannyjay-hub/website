@@ -104,7 +104,7 @@ Assigned to: ThemeForest
 			var showBtn = function() {
 				setTimeout(function() {
 					$('.brc_hirebtn').addClass('mbrc_hirebtn');
-				}, 2500);
+				}, 1000);
 			};
 			if (document.readyState === 'complete') {
 				showBtn();
