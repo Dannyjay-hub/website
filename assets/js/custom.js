@@ -44,7 +44,7 @@ Assigned to: ThemeForest
 			this.window_scroll();
 			this.scroll_contact();
 			this.read_more();
-			this.calendly_popup();
+			
 			
 		},
 		
@@ -467,19 +467,7 @@ Assigned to: ThemeForest
 	},
 	/*------------------------------------------------------------------*/ 
 	
-	// Calendly Popup Integration
-	calendly_popup: function() {
-		$(document).on('click', 'a[href*="calendly.com"]', function(e) {
-			e.preventDefault();
-			if (typeof Calendly !== 'undefined') {
-				Calendly.initPopupWidget({ url: $(this).attr('href') });
-			} else {
-				// Fallback to opening in new window if script fails to load
-				window.open($(this).attr('href'), '_blank');
-			}
-			return false;
-		});
-	},
+	
 	/*------------------------------------------------------------------*/ 
 	
 	};

@@ -3339,12 +3339,23 @@ html.lenis, html.lenis body {
 }
 
 /* Fix bottom footer white gap layout issues */
+.port_contact_wrapper {
+    padding-bottom: 0 !important;
+}
 .port_footer_setions {
     padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 .footer_section {
     padding-bottom: 0 !important;
 }
 .port_footer_setions .copy_right_wrapper {
     margin-bottom: 0 !important;
+    overflow: hidden !important;
+}
+.copy_right_wrapper p.copy_right {
+    margin-bottom: 0 !important;
+}
+.port_sec_warapper {
+    padding-bottom: 0 !important;
 }
