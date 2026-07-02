@@ -347,15 +347,14 @@ Assigned to: ThemeForest
 				});
 				return check;
 			}
-			$('.submitForm').on('click', function() {
-				var _this = $(this);
-				console.log(_this.attr('data-type'));
-				var targetForm = _this.closest('form');
+			$('form.port_contact_form').on('submit', function(e) {
+				e.preventDefault();
+				var targetForm = $(this);
 				var errroTarget = targetForm.find('.response');
 				var check = checkRequire(targetForm , errroTarget);
 				if(check == 0){
 					$.ajax({
-						method : 'post',
+						type : 'POST',
 						url : '/',
 						data: targetForm.serialize(),
 						cache: false
