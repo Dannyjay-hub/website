@@ -217,23 +217,18 @@
 <!-- GSAP & Lenis Smooth Scroll -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script>
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Lenis Smooth Scroll
-const lenis = new Lenis();
+// Initialize Lenis Smooth Scroll with autoRaf enabled (handles tick/rendering loop automatically)
+const lenis = new Lenis({
+  autoRaf: true
+});
 
 // Integrate Lenis with GSAP ScrollTrigger
 lenis.on('scroll', ScrollTrigger.update);
-
-// Run Lenis tick loop via GSAP ticker
-gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
 </script>
 <script src="assets/js/custom.js"></script>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></ul></div></div></div><script>

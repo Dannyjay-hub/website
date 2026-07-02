@@ -3217,6 +3217,21 @@ p.banner_pera {
 }
 }
 
-/* Your existing CSS code */
-
 /*  ================== 20 End media query css ==================  */
+
+/* Lenis Smooth Scroll CSS Helper */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
