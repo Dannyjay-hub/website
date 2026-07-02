@@ -219,29 +219,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
 <script>
+// Register GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
 // Initialize Lenis Smooth Scroll
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  orientation: 'vertical',
-  gestureOrientation: 'vertical',
-  smoothWheel: true,
-  wheelMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false,
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
+const lenis = new Lenis();
 
 // Integrate Lenis with GSAP ScrollTrigger
 lenis.on('scroll', ScrollTrigger.update);
 
+// Run Lenis tick loop via GSAP ticker
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000);
 });
