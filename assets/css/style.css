@@ -3374,6 +3374,7 @@ html.lenis, html.lenis body {
     z-index: 10 !important; /* Put text layer (name) on top of image wrapper */
 }
 .banner_svg_box {
-    transform: none !important;
+    transform: scale(0.9) !important; /* Scale the image down slightly */
+    transform-origin: right center !important; /* Scale it towards the right side of the screen */
     transition: none !important; /* Disable the old scale 0-100 animations */
 }
