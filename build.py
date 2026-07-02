@@ -10,7 +10,6 @@ COMPONENTS = [
     "sidebar.html",
     "banner.html",
     "about.html",
-    "education.html",
     "skills.html",
     "experience.html",
     "services.html",
